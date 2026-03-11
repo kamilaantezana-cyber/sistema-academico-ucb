@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Sistema Académico</title>
+
+<style>
+
+body{
+font-family: Arial, sans-serif;
+background:#f2f2f2;
+margin:0;
+}
+
+.topbar{
+background:#0c2d48;
+color:white;
+padding:15px;
+font-weight:bold;
+}
+
+.container{
+width:900px;
+margin:auto;
+margin-top:20px;
+}
+
+.card{
+background:white;
+border-radius:8px;
+padding:20px;
+margin-bottom:20px;
+box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+
+.title{
+font-size:20px;
+font-weight:bold;
+margin-bottom:10px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:200px 1fr 1fr;
+gap:20px;
+align-items:center;
+}
+
+.avatar{
+width:120px;
+height:120px;
+background:#ddd;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:40px;
+}
+
+.data p{
+margin:5px 0;
+}
+
+.map{
+width:100%;
+height:300px;
+border-radius:6px;
+overflow:hidden;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="topbar">
+SISTEMA ACADÉMICO NACIONAL
+</div>
+
+<div class="container">
+
+<div class="card">
+
+<div class="title">DATOS PERSONALES</div>
+
+<div class="grid">
+
+<div class="avatar">
+👤
+</div>
+
+<div class="data">
+<p><b>Nombre:</b> ACOSTA HERNANDEZ JESSICA VALERIA</p>
+<p><b>Cédula:</b> 7213956</p>
+<p><b>Nacionalidad:</b> Bolivia</p>
+<p><b>Lugar de nacimiento:</b> Tarija</p>
+<p><b>Extranjero:</b> No</p>
+</div>
+
+<div class="data">
+<p><b>Fecha de nacimiento:</b> 16/10/2001</p>
+<p><b>Sexo:</b> Femenino</p>
+<p><b>Estado civil:</b> Soltero</p>
+<p><b>Tipo de sangre:</b> B RH+</p>
+<p><b>Nro Registro:</b> 2022600018</p>
+</div>
+
+</div>
+</div>
+
+
+<div class="card">
+
+<div class="title">DATOS DEL DOMICILIO</div>
+
+<p><b>Teléfono fijo:</b> 6631173</p>
+<p><b>Teléfono móvil:</b> 69329454</p>
+<p><b>Dirección:</b> B/CONSTRI</p>
+<p><b>Correo personal:</b> ejemplo@gmail.com</p>
+<p><b>Correo institucional:</b> jessica@ucb.edu.bo</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="title">Ubicación</div>
+
+<div class="map">
+
+<iframe
+width="100%"
+height="300"
+style="border:0"
+loading="lazy"
+allowfullscreen
+src="https://maps.google.com/maps?q=universidad%20catolica%20boliviana%20cochabamba&t=&z=15&ie=UTF8&iwloc=&output=embed">
+</iframe>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
