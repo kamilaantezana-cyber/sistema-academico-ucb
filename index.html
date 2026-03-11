@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
 <title>Sistema Académico Nacional</title>
 
@@ -12,29 +14,75 @@ background:#f2f2f2;
 margin:0;
 }
 
+/* BARRA SUPERIOR */
+
 .topbar{
 background:#0b3a5b;
 color:white;
-padding:15px;
+padding:15px 20px;
 display:flex;
 justify-content:space-between;
 align-items:center;
 font-weight:bold;
 }
 
+/* BOTON MENU */
+
+.menu-btn{
+font-size:22px;
+cursor:pointer;
+margin-right:15px;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+position:fixed;
+left:-260px;
+top:0;
+width:260px;
+height:100%;
+background:white;
+box-shadow:2px 0 10px rgba(0,0,0,0.2);
+padding:20px;
+transition:0.3s;
+z-index:1000;
+}
+
+.sidebar h3{
+margin-top:0;
+}
+
+.sidebar p{
+padding:12px 0;
+border-bottom:1px solid #eee;
+cursor:pointer;
+}
+
+.sidebar p:hover{
+color:#0b3a5b;
+font-weight:bold;
+}
+
+/* CONTENEDOR */
+
 .container{
 width:90%;
 margin:auto;
-margin-top:20px;
+margin-top:25px;
 }
+
+/* TARJETAS */
 
 .card{
 background:white;
-border-radius:8px;
-padding:20px;
+border-radius:10px;
+padding:25px;
 margin-bottom:20px;
-box-shadow:0 2px 5px rgba(0,0,0,0.15);
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
 }
+
+/* TITULOS */
 
 .section-title{
 font-weight:bold;
@@ -43,6 +91,8 @@ border-bottom:2px solid #ddd;
 padding-bottom:10px;
 margin-bottom:15px;
 }
+
+/* GRID */
 
 .grid{
 display:grid;
@@ -55,11 +105,16 @@ font-weight:bold;
 color:#555;
 }
 
+/* MAPA */
+
 .map{
 width:100%;
 height:300px;
 border:0;
+border-radius:6px;
 }
+
+/* TABLA */
 
 table{
 width:100%;
@@ -84,13 +139,29 @@ text-align:center;
 
 <body>
 
+<!-- SIDEBAR -->
+
+<div id="sidebar" class="sidebar">
+
+<h3>Menú</h3>
+
+<p>Datos personales</p>
+<p>Perfil</p>
+<p>File académico</p>
+<p>Biblioteca virtual</p>
+<p>Videos estudiantes</p>
+<p>Reportes</p>
+<p>Notas</p>
+
+</div>
+
+<!-- BARRA SUPERIOR -->
+
 <div class="topbar">
 
-<div style="display:flex;align-items:center;gap:15px;">
+<div style="display:flex;align-items:center;">
 
-<div onclick="toggleMenu()" style="cursor:pointer;font-size:22px;">
-☰
-</div>
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
 
 <div>SISTEMA ACADÉMICO NACIONAL</div>
 
@@ -99,6 +170,8 @@ text-align:center;
 <div>KAMILA ANTEZANA RIVERA</div>
 
 </div>
+
+<!-- CONTENIDO -->
 
 <div class="container">
 
@@ -191,6 +264,26 @@ src="https://maps.google.com/maps?q=Tarija%20Bolivia&t=&z=14&ie=UTF8&iwloc=&outp
 </div>
 
 </div>
+
+<script>
+
+function toggleMenu(){
+
+const menu = document.getElementById("sidebar");
+
+if(menu.style.left === "0px"){
+
+menu.style.left = "-260px";
+
+}else{
+
+menu.style.left = "0px";
+
+}
+
+}
+
+</script>
 
 </body>
 </html>
