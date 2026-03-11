@@ -2,7 +2,6 @@
 <html lang="es">
 
 <head>
-
 <meta charset="UTF-8">
 <title>Sistema Académico Nacional</title>
 
@@ -63,8 +62,6 @@ cursor:pointer;
 color:#0b3a5b;
 font-weight:bold;
 }
-
-
 
 /* CONTENEDOR */
 
@@ -136,17 +133,12 @@ text-align:center;
 }
 
 </style>
-
 </head>
 
 <body>
 
-<!-- SIDEBAR -->
-
 <div id="sidebar" class="sidebar">
-
 <h3>Menú</h3>
-
 <p>Datos personales</p>
 <p>Perfil</p>
 <p>File académico</p>
@@ -154,31 +146,22 @@ text-align:center;
 <p>Videos estudiantes</p>
 <p>Reportes</p>
 <p>Notas</p>
-
 </div>
-
-<!-- BARRA SUPERIOR -->
 
 <div class="topbar">
 
 <div style="display:flex;align-items:center;">
-
 <div class="menu-btn" onclick="toggleMenu()">☰</div>
-
 <div>SISTEMA ACADÉMICO NACIONAL</div>
-
 </div>
 
 <div>KAMILA ANTEZANA RIVERA</div>
 
 </div>
 
-<!-- CONTENIDO -->
-
 <div class="container">
 
 <div class="card">
-
 <div class="section-title">DATOS PERSONALES</div>
 
 <div class="grid">
@@ -198,12 +181,9 @@ text-align:center;
 <div><label>Correo institucional:</label> kamila.antezana@ucb.edu.bo</div>
 
 </div>
-
 </div>
 
-
 <div class="card">
-
 <div class="section-title">UBICACIÓN</div>
 
 <iframe class="map"
@@ -211,7 +191,6 @@ src="https://maps.google.com/maps?q=Tarija%20Bolivia&t=&z=14&ie=UTF8&iwloc=&outp
 </iframe>
 
 </div>
-
 
 <div class="card">
 
@@ -221,7 +200,6 @@ src="https://maps.google.com/maps?q=Tarija%20Bolivia&t=&z=14&ie=UTF8&iwloc=&outp
 <p><b>Universidad:</b> Universidad Católica Boliviana "San Pablo"</p>
 
 </div>
-
 
 <div class="card">
 
@@ -274,19 +252,13 @@ src="https://maps.google.com/maps?q=Tarija%20Bolivia&t=&z=14&ie=UTF8&iwloc=&outp
 <script>
 
 function toggleMenu(){
-
 const menu = document.getElementById("sidebar");
 
 if(menu.style.left === "0px"){
-
 menu.style.left = "-260px";
-
 }else{
-
 menu.style.left = "0px";
-
 }
-
 }
 
 </script>
