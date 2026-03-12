@@ -2,6 +2,7 @@
 <html lang="es">
 
 <head>
+
 <meta charset="UTF-8">
 <title>Sistema Académico Nacional</title>
 
@@ -55,10 +56,14 @@ margin-top:0;
 .sidebar p{
 padding:12px 0;
 border-bottom:1px solid #eee;
-cursor:pointer;
 }
 
-.sidebar p:hover{
+.sidebar a{
+text-decoration:none;
+color:black;
+}
+
+.sidebar a:hover{
 color:#0b3a5b;
 font-weight:bold;
 }
@@ -133,35 +138,47 @@ text-align:center;
 }
 
 </style>
+
 </head>
 
 <body>
 
+<!-- SIDEBAR -->
+
 <div id="sidebar" class="sidebar">
+
 <h3>Menú</h3>
-<p>Datos personales</p>
-<p>Perfil</p>
-<p>File académico</p>
-<p>Biblioteca virtual</p>
-<p>Videos estudiantes</p>
-<p>Reportes</p>
-<p>Notas</p>
+
+<p><a href="index.html">Datos personales</a></p>
+<p><a href="pagos.html">Plataforma de pagos en línea</a></p>
+<p><a href="file-academico.html">File Académico</a></p>
+<p><a href="https://biblioteca.ucb.edu.bo/" target="_blank">Biblioteca Virtual</a></p>
+<p><a href="reportes.html">Reportes</a></p>
+
 </div>
+
+<!-- BARRA SUPERIOR -->
 
 <div class="topbar">
 
 <div style="display:flex;align-items:center;">
+
 <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
 <div>SISTEMA ACADÉMICO NACIONAL</div>
+
 </div>
 
 <div>KAMILA ANTEZANA RIVERA</div>
 
 </div>
 
+<!-- CONTENIDO -->
+
 <div class="container">
 
 <div class="card">
+
 <div class="section-title">DATOS PERSONALES</div>
 
 <div class="grid">
@@ -181,9 +198,12 @@ text-align:center;
 <div><label>Correo institucional:</label> kamila.antezana@ucb.edu.bo</div>
 
 </div>
+
 </div>
 
+
 <div class="card">
+
 <div class="section-title">UBICACIÓN</div>
 
 <iframe class="map"
@@ -191,6 +211,7 @@ src="https://maps.google.com/maps?q=Tarija%20Bolivia&t=&z=14&ie=UTF8&iwloc=&outp
 </iframe>
 
 </div>
+
 
 <div class="card">
 
@@ -200,6 +221,7 @@ src="https://maps.google.com/maps?q=Tarija%20Bolivia&t=&z=14&ie=UTF8&iwloc=&outp
 <p><b>Universidad:</b> Universidad Católica Boliviana "San Pablo"</p>
 
 </div>
+
 
 <div class="card">
 
@@ -242,16 +264,7 @@ src="https://maps.google.com/maps?q=Tarija%20Bolivia&t=&z=14&ie=UTF8&iwloc=&outp
 <td>0</td>
 <td>0</td>
 </tr>
-  
-<tr>
-<td>Diseño Digital</td>
-<td>65</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
-  
+
 </table>
 
 </div>
@@ -261,13 +274,19 @@ src="https://maps.google.com/maps?q=Tarija%20Bolivia&t=&z=14&ie=UTF8&iwloc=&outp
 <script>
 
 function toggleMenu(){
+
 const menu = document.getElementById("sidebar");
 
 if(menu.style.left === "0px"){
+
 menu.style.left = "-260px";
+
 }else{
+
 menu.style.left = "0px";
+
 }
+
 }
 
 </script>
