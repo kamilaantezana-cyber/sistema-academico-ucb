@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<title>Plataforma de Pagos</title>
+
+<style>
+
+body{
+font-family: Arial;
+background:#f2f2f2;
+margin:0;
+}
+
+.topbar{
+background:#0b3a5b;
+color:white;
+padding:15px 20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+font-weight:bold;
+}
+
+.menu-btn{
+font-size:22px;
+cursor:pointer;
+margin-right:15px;
+}
+
+.sidebar{
+position:fixed;
+left:-260px;
+top:0;
+width:260px;
+height:100%;
+background:white;
+box-shadow:2px 0 10px rgba(0,0,0,0.2);
+padding:20px;
+transition:0.3s;
+z-index:1000;
+}
+
+.sidebar p{
+padding:12px 0;
+border-bottom:1px solid #eee;
+}
+
+.sidebar a{
+text-decoration:none;
+color:black;
+}
+
+.container{
+width:90%;
+margin:auto;
+margin-top:25px;
+}
+
+.card{
+background:white;
+border-radius:10px;
+padding:25px;
+margin-bottom:20px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.section-title{
+font-weight:bold;
+font-size:18px;
+border-bottom:2px solid #ddd;
+padding-bottom:10px;
+margin-bottom:15px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+th{
+background:#0b3a5b;
+color:white;
+padding:10px;
+}
+
+td{
+padding:10px;
+border-bottom:1px solid #ddd;
+text-align:center;
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="sidebar" class="sidebar">
+
+<h3>Menú</h3>
+
+<p><a href="index.html">Datos personales</a></p>
+<p><a href="pagos.html">Plataforma de pagos en línea</a></p>
+<p><a href="file-academico.html">File Académico</a></p>
+<p><a href="https://biblioteca.ucb.edu.bo/" target="_blank">Biblioteca Virtual</a></p>
+<p><a href="reportes.html">Reportes</a></p>
+
+</div>
+
+<div class="topbar">
+
+<div style="display:flex;align-items:center;">
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+<div>SISTEMA ACADÉMICO NACIONAL</div>
+</div>
+
+<div>KAMILA ANTEZANA RIVERA</div>
+
+</div>
+
+<div class="container">
+
+<div class="card">
+
+<div class="section-title">PLATAFORMA DE PAGOS</div>
+
+<table>
+
+<tr>
+<th>Concepto</th>
+<th>Monto</th>
+<th>Estado</th>
+</tr>
+
+<tr>
+<td>Matrícula</td>
+<td>500 Bs</td>
+<td>Pendiente</td>
+</tr>
+
+<tr>
+<td>Mensualidad Marzo</td>
+<td>850 Bs</td>
+<td>Pagado</td>
+</tr>
+
+<tr>
+<td>Mensualidad Abril</td>
+<td>850 Bs</td>
+<td>Pendiente</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+<script>
+
+function toggleMenu(){
+const menu = document.getElementById("sidebar");
+
+if(menu.style.left === "0px"){
+menu.style.left = "-260px";
+}else{
+menu.style.left = "0px";
+}
+
+}
+
+</script>
+
+</body>
+</html>
