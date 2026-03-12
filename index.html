@@ -2,8 +2,8 @@
 <html lang="es">
 
 <head>
-
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sistema Académico Nacional</title>
 
 <style>
@@ -49,6 +49,10 @@ transition:0.3s;
 z-index:1000;
 }
 
+.sidebar.active{
+left:0;
+}
+
 .sidebar h3{
 margin-top:0;
 }
@@ -66,6 +70,25 @@ color:black;
 .sidebar a:hover{
 color:#0b3a5b;
 font-weight:bold;
+}
+
+/* FONDO OSCURO CUANDO SE ABRE MENU */
+
+.overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.4);
+opacity:0;
+pointer-events:none;
+transition:0.3s;
+}
+
+.overlay.active{
+opacity:1;
+pointer-events:auto;
 }
 
 /* CONTENEDOR */
@@ -138,10 +161,13 @@ text-align:center;
 }
 
 </style>
-
 </head>
 
 <body>
+
+<!-- OVERLAY -->
+
+<div id="overlay" class="overlay" onclick="toggleMenu()"></div>
 
 <!-- SIDEBAR -->
 
@@ -201,7 +227,6 @@ text-align:center;
 
 </div>
 
-
 <div class="card">
 
 <div class="section-title">UBICACIÓN</div>
@@ -212,7 +237,6 @@ src="https://maps.google.com/maps?q=Tarija%20Bolivia&t=&z=14&ie=UTF8&iwloc=&outp
 
 </div>
 
-
 <div class="card">
 
 <div class="section-title">DATOS DE LA CARRERA</div>
@@ -222,12 +246,9 @@ src="https://maps.google.com/maps?q=Tarija%20Bolivia&t=&z=14&ie=UTF8&iwloc=&outp
 
 </div>
 
-
 <div class="card">
 
-<div class="section-title">NOTAS ACADÉMICAS</div>
-
-  <div class="section-title">SEMESTRE 4</div>
+<div class="section-title">NOTAS ACADÉMICAS - SEMESTRE 4</div>
 
 <table>
 
@@ -286,17 +307,11 @@ src="https://maps.google.com/maps?q=Tarija%20Bolivia&t=&z=14&ie=UTF8&iwloc=&outp
 
 function toggleMenu(){
 
-const menu = document.getElementById("sidebar");
+const sidebar = document.getElementById("sidebar");
+const overlay = document.getElementById("overlay");
 
-if(menu.style.left === "0px"){
-
-menu.style.left = "-260px";
-
-}else{
-
-menu.style.left = "0px";
-
-}
+sidebar.classList.toggle("active");
+overlay.classList.toggle("active");
 
 }
 
