@@ -14,93 +14,32 @@ background:#f2f2f2;
 margin:0;
 }
 
-/* BARRA SUPERIOR */
+/* BARRA DE NAVEGACIÓN */
 
-.topbar{
+.navbar{
 background:#0b3a5b;
-color:white;
-padding:15px 20px;
+padding:15px;
 display:flex;
-justify-content:space-between;
-align-items:center;
-font-weight:bold;
+gap:20px;
 }
 
-/* BOTON MENU */
-
-.menu-btn{
-font-size:22px;
-cursor:pointer;
-margin-right:15px;
-}
-
-/* SIDEBAR */
-
-.sidebar{
-position:fixed;
-left:-260px;
-top:0;
-width:260px;
-height:100%;
-background:white;
-box-shadow:2px 0 10px rgba(0,0,0,0.2);
-padding:20px;
-transition:0.3s;
-z-index:1000;
-}
-
-.sidebar.active{
-left:0;
-}
-
-.sidebar h3{
-margin-top:0;
-}
-
-.sidebar p{
-padding:12px 0;
-border-bottom:1px solid #eee;
-margin:0;
-}
-
-.sidebar a{
+.navbar a{
+color:white;
 text-decoration:none;
-color:black;
-}
-
-.sidebar a:hover{
-color:#0b3a5b;
 font-weight:bold;
 }
 
-/* FONDO OSCURO CUANDO SE ABRE MENU */
-
-.overlay{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.4);
-opacity:0;
-pointer-events:none;
-transition:0.3s;
+.navbar a:hover{
+text-decoration:underline;
 }
 
-.overlay.active{
-opacity:1;
-pointer-events:auto;
-}
-
-/* CONTENEDOR */
+/* CONTENIDO */
 
 .container{
 width:90%;
 margin:auto;
-margin-top:25px;
+margin-top:30px;
 }
-
-/* TARJETAS */
 
 .card{
 background:white;
@@ -110,8 +49,6 @@ margin-bottom:20px;
 box-shadow:0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* TITULOS */
-
 .section-title{
 font-weight:bold;
 font-size:18px;
@@ -119,8 +56,6 @@ border-bottom:2px solid #ddd;
 padding-bottom:10px;
 margin-bottom:15px;
 }
-
-/* GRID */
 
 .grid{
 display:grid;
@@ -133,16 +68,12 @@ font-weight:bold;
 color:#555;
 }
 
-/* MAPA */
-
 .map{
 width:100%;
 height:300px;
 border:0;
 border-radius:6px;
 }
-
-/* TABLA */
 
 table{
 width:100%;
@@ -166,38 +97,17 @@ text-align:center;
 
 <body>
 
-<!-- OVERLAY -->
+<!-- MENÚ SUPERIOR -->
 
-<div id="overlay" class="overlay" onclick="toggleMenu()"></div>
+<div class="navbar">
 
-<!-- SIDEBAR -->
-
-<div id="sidebar" class="sidebar">
-
-<h3>Menú</h3>
-
-<p><a href="index.html">Datos personales</a></p>
-<p><a href="pagos.html">Plataforma de pagos en línea</a></p>
-<p><a href="file-academico.html">File Académico</a></p>
-<p><a href="https://biblioteca.ucb.edu.bo/" target="_blank">Biblioteca Virtual</a></p>
-<p><a href="reportes.html">Reportes</a></p>
+<a href="index.html">Datos personales</a>
+<a href="pagos.html">Pagos en línea</a>
+<a href="file-academico.html">File académico</a>
+<a href="reportes.html">Reportes</a>
+<a href="https://biblioteca.ucb.edu.bo/" target="_blank">Biblioteca virtual</a>
 
 </div>
-
-<!-- BARRA SUPERIOR -->
-
-<div class="topbar">
-
-<div style="display:flex;align-items:center;">
-<div class="menu-btn" onclick="toggleMenu()">☰</div>
-<div>SISTEMA ACADÉMICO NACIONAL</div>
-</div>
-
-<div>KAMILA ANTEZANA RIVERA</div>
-
-</div>
-
-<!-- CONTENIDO -->
 
 <div class="container">
 
@@ -300,20 +210,6 @@ src="https://maps.google.com/maps?q=Tarija%20Bolivia&t=&z=14&ie=UTF8&iwloc=&outp
 </div>
 
 </div>
-
-<script>
-
-function toggleMenu(){
-
-const sidebar = document.getElementById("sidebar");
-const overlay = document.getElementById("overlay");
-
-sidebar.classList.toggle("active");
-overlay.classList.toggle("active");
-
-}
-
-</script>
 
 </body>
 </html>
